@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora CLT vs. PJ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guia do Projeto: Calculadora de Impostos CLT vs. PJ</h1>
+
+        <h2>Selecione o Modo de Cálculo</h2>
+        <div id="seletor-modo">
+            <button id="btn-modo-clt" class="btn">Calcular para CLT</button>
+            <button id="btn-modo-pj" class="btn">Calcular para PJ</button>
+        </div>
+
+        <hr>
+
+        <div id="form-clt" class="form-section hidden">
+            <h2>Cálculo CLT</h2>
+            <div class="form-group">
+                <label for="salario-bruto">Salário Bruto Mensal (R$):</label>
+                <input type="number" id="salario-bruto" placeholder="Ex: 5000">
+            </div>
+            <div class="form-group">
+                <label for="dependentes">Número de Dependentes:</label>
+                <input type="number" id="dependentes" value="0">
+            </div>
+            <button id="calcular-clt" class="btn btn-primary">Calcular</button>
+        </div>
+
+        <div id="form-pj" class="form-section hidden">
+            <h2>Cálculo PJ</h2>
+            <div class="form-group">
+                <label for="regime-pj">Selecione o Regime:</label>
+                <select id="regime-pj">
+                    <option value="simples">Simples Nacional (Anexo III)</option>
+                    <option value="presumido">Lucro Presumido</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="faturamento-bruto">Faturamento Bruto Mensal (R$):</label>
+                <input type="number" id="faturamento-bruto" placeholder="Ex: 10000">
+            </div>
+            <button id="calcular-pj" class="btn btn-primary">Calcular</button>
+        </div>
+
+        <div id="relatorio" class="relatorio-section hidden">
+            <h3>Seu Relatório de Encargos</h3>
+            <div id="relatorio-conteudo">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
