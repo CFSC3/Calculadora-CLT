@@ -1,7 +1,7 @@
 // Aguarda o DOM estar completamente carregado para executar o script
 document.addEventListener("DOMContentLoaded", () => {
 
-    // --- 1. Seleção de Elementos do DOM ---
+    // Seleção de Elementos do DOM
     const btnModoCLT = document.getElementById("btn-modo-clt");
     const btnModoPJ = document.getElementById("btn-modo-pj");
     const formCLT = document.getElementById("form-clt");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCalcularCLT = document.getElementById("calcular-clt");
     const btnCalcularPJ = document.getElementById("calcular-pj");
 
-    // --- 2. Lógica de Eventos da Interface ---
+    // Lógica de Eventos da Interface
 
     // Mostrar formulário CLT
     btnModoCLT.addEventListener("click", () => {
@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Botão de cálculo PJ
     btnCalcularPJ.addEventListener("click", handleCalcularPJ);
 
-
-    // --- 3. Funções de Lógica Principal (Handlers) ---
 
     function handleCalcularCLT() {
         // Obter valores dos inputs
@@ -103,24 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // --- 4. Funções de Cálculo CLT ---
+    // Funções de Cálculo CLT
 
-    /** Formata um número para o padrão monetário BRL */
+    // Formata um número para o padrão monetário BRL
     function formatarMoeda(valor) {
         return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
 
-    /** Calcula 8% do salário bruto */
+    // Calcula 8% do salário bruto
     function calcularFGTS(salarioBruto) {
         return salarioBruto * 0.08;
     }
 
-    /** Calcula o INSS de forma progressiva (faixa por faixa) */
+    // Calcula o INSS de forma progressiva
     function calcularINSS(salario) {
         const tetoFaixa1 = 1412.00;
         const tetoFaixa2 = 2666.68;
         const tetoFaixa3 = 4000.03;
-        const tetoFaixa4 = 7786.02; // Teto
+        const tetoFaixa4 = 7786.02;
 
         let inss = 0;
         
@@ -152,10 +150,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return inss;
     }
 
-    /** Calcula o IRRF com base na tabela progressiva (Alíquota - Parcela a Deduzir) */
+    // Calcula o IRRF com base na tabela progressiva (Alíquota - Parcela a Deduzir)
     function calcularIRRF(salarioBruto, inss, dependentes) {
-        const valorPorDependente = 189.59; //
-        const deducaoDependentes = dependentes * valorPorDependente; //
+        const valorPorDependente = 189.59; 
+        const deducaoDependentes = dependentes * valorPorDependente; 
         
         // Base de Cálculo = Salário Bruto - INSS - Dependentes
         const baseCalculo = salarioBruto - inss - deducaoDependentes;
@@ -179,25 +177,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return Math.max(0, irrf);
     }
 
-    /** Calcula Salário Líquido = Bruto - INSS - IRRF */
+    // Calcula Salário Líquido = Bruto - INSS - IRRF
     function calcularSalarioLiquido(salarioBruto, inss, irrf) {
         return salarioBruto - inss - irrf;
     }
 
-    // --- 5. Funções de Cálculo PJ (Simplificadas conforme o guia) ---
+    // Funções de Cálculo PJ
 
-    /** Alíquota de 6% sobre o faturamento */
+    // Alíquota de 6% sobre o faturamento
     function calcularSimplesNacional(faturamento) {
         const impostoPago = faturamento * 0.06;
         const lucroLiquido = faturamento - impostoPago;
         return { impostoPago, lucroLiquido };
     }
 
-    /** Soma dos impostos (PIS, COFINS, ISS, IRPJ, CSLL) */
+    // Soma dos impostos (PIS, COFINS, ISS, IRPJ, CSLL)
     function calcularLucroPresumido(faturamento) {
-        const pis = faturamento * 0.0065; //
-        const cofins = faturamento * 0.03; //
-        const iss = faturamento * 0.05; //
+        const pis = faturamento * 0.0065; 
+        const cofins = faturamento * 0.03; 
+        const iss = faturamento * 0.05; 
 
         // IRPJ (15% sobre 32% do faturamento)
         const irpj = (faturamento * 0.32) * 0.15;
