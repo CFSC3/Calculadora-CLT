@@ -27,7 +27,20 @@ A lógica do sistema foi construída para simular cenários reais, sendo ideal p
 
 ## 📸 Demonstração
 <div align="center">
-  <img src="./screenshot.png" alt="Interface da Calculadora CLT vs PJ" width="600px">
+  <img src="https://github.com/CFSC3/Calculadora-CLT/blob/main/img/img1.png" alt="Interface da Calculadora CLT vs PJ" width="500px">
+  <img src="https://github.com/CFSC3/Calculadora-CLT/blob/main/img/img2.png" alt="Interface da Calculadora CLT vs PJ" width="500px">
+  <img src="https://github.com/CFSC3/Calculadora-CLT/blob/main/img/img3.png" alt="Interface da Calculadora CLT vs PJ" width="500px">
+  <img src="https://github.com/CFSC3/Calculadora-CLT/blob/main/img/img4.png" alt="Interface da Calculadora CLT vs PJ" width="500px">
+  <img src="https://github.com/CFSC3/Calculadora-CLT/blob/main/img/img5.png" alt="Interface da Calculadora CLT vs PJ" width="500px">
+  <img src="https://github.com/CFSC3/Calculadora-CLT/blob/main/img/img6.png" alt="Interface da Calculadora CLT vs PJ" width="500px">
 </div>
 
 ## 🚀 Como Executar
+
+Para testar a aplicação clique no link abaixo: 
+
+👉 **[Abrir Calculadora CLT vs. PJ](https://cfsc3.github.io/Calculadora-CLT/)**
+
+Caso queira rodar localmente:
+1. Clone este repositório.
+2. Abra o arquivo `index.html` no seu navegador.
