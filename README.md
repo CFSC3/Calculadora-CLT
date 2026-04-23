@@ -39,7 +39,7 @@ A lógica do sistema foi construída para simular cenários reais, sendo ideal p
 
 Para testar a aplicação clique no link abaixo: 
 
-👉 **[Abrir Calculadora CLT vs. PJ](https://cfsc3.github.io/Calculadora-CLT/)**
+👉 **[Abrir Calculadora CLT vs. PJ](https://cfsc3.github.io/Calculadora-CLT/CalculadoraCLT/index.html)**
 
 Caso queira rodar localmente:
 1. Clone este repositório.
